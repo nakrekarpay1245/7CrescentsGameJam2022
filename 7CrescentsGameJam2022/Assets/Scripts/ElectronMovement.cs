@@ -38,11 +38,11 @@ public class ElectronMovement : MonoBehaviour
             transform.RotateAround(pivotObject.transform.position,
                 new Vector3(0, 1, 0), rotateSpeed);
 
-            transform.RotateAround(pivotObject.transform.position,
-                 new Vector3(1, 0, 0), rotateSpeed * Random.Range(0.25f, 1f));
+            //transform.RotateAround(pivotObject.transform.position,
+            //     new Vector3(1, 0, 0), rotateSpeed * Random.Range(0.25f, 1f));
 
-            transform.RotateAround(pivotObject.transform.position,
-                  new Vector3(0, 0, 1), rotateSpeed * Random.Range(-0.25f, -1f));
+            //transform.RotateAround(pivotObject.transform.position,
+            //      new Vector3(0, 0, 1), rotateSpeed * Random.Range(-0.25f, -1f));
             //   Debug.Log("Rotate");
         }
 

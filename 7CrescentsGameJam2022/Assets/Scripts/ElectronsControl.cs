@@ -7,6 +7,8 @@ public class ElectronsControl : MonoBehaviour
     //Public Variables
     public List<GameObject> electrons;
 
+    public bool isObjectPlayer;
+
     private void Start()
     {
         InvokeRepeating("ActiveElectron", 1, 1);
@@ -15,10 +17,18 @@ public class ElectronsControl : MonoBehaviour
     public void AddElectron(GameObject electron)
     {
         electrons.Add(electron);
+        if (isObjectPlayer)
+        {
+            LevelManager.levelManager.IncreaseElectronCount();
+        }
     }
     public void RemoveElectron(GameObject electron)
     {
         electrons.Remove(electron);
+        if (isObjectPlayer)
+        {
+            LevelManager.levelManager.DecreaseElectronCount();
+        }
     }
 
     private void ActiveElectron()

@@ -51,7 +51,7 @@ public class MovementNPC : MonoBehaviour
                     < atom.gameObject.GetComponent<ElectronsControl>().electrons.Count)
                 {
                     transform.position = Vector3.Lerp(transform.position,
-                        atom.transform.position, Time.deltaTime * _moveSpeed);
+                        atom.transform.position, Time.deltaTime * _moveSpeed * 0.25f);
                 }
                 else
                 {
